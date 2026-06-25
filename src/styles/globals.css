@@ -340,17 +340,22 @@ footer { background: var(--green-dark); padding: 4rem 2rem 0; }
 .audit-h2 span { color: var(--green); }
 .audit-sub { font-size: 15px; color: var(--text-sec); margin-bottom: 2rem; }
 .af-field { margin-bottom: 1rem; }
-.af-field label { font-size: 13px; font-weight: 600; display: block; margin-bottom: 6px; }
+.af-field label { font-size: 13px; font-weight: 600; display: block; margin-bottom: 6px; color: var(--green); }
 .af-input { position: relative; }
-.af-input i { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-sec); font-size: 15px; }
-.af-input input, .af-input select { width: 100%; padding: 10px 12px 10px 36px; border: 1px solid var(--green); border-radius: 8px; font-size: 14px; font-family: inherit; background: #fff; color: var(--text); outline: none; }
-.af-input input:focus, .af-input select:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(14,122,90,0.12); }
+.af-input i { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--green); font-size: 15px; }
+.af-input input, .af-input select { width: 100%; padding: 10px 12px 10px 36px; border: 1.5px solid rgba(14,122,90,0.35); border-radius: 8px; font-size: 14px; font-family: inherit; background: rgba(14,122,90,0.04); color: var(--text); outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
+.af-input input:focus, .af-input select:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(14,122,90,0.12); background: rgba(14,122,90,0.07); }
+.af-input input::placeholder { color: #9ab8ad; }
 .af-textarea { align-items: flex-start; }
 .af-textarea i { top: 14px; transform: none; }
-.af-input textarea { width: 100%; padding: 10px 12px 10px 36px; border: 1px solid var(--green); border-radius: 8px; font-size: 14px; font-family: inherit; resize: vertical; outline: none; }
-.af-input textarea:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(14,122,90,0.12); }
-.af-submit { width: 100%; background: var(--green); color: #fff; border: none; padding: 14px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit; margin-top: 0.5rem; }
-.af-submit:hover { background: #0B6649; }
+.af-input textarea { width: 100%; padding: 10px 12px 10px 36px; border: 1.5px solid rgba(14,122,90,0.35); border-radius: 8px; font-size: 14px; font-family: inherit; resize: vertical; outline: none; background: rgba(14,122,90,0.04); color: var(--text); transition: border-color 0.2s, box-shadow 0.2s; }
+.af-input textarea:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(14,122,90,0.12); background: rgba(14,122,90,0.07); }
+.af-input textarea::placeholder { color: #9ab8ad; }
+.af-submit { width: 100%; background: linear-gradient(135deg, #0E7A5A 0%, #16A97D 50%, #1aff9c 100%); background-size: 200% 200%; color: #fff; border: none; padding: 14px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit; margin-top: 0.5rem; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(14,122,90,0.4), 0 1px 0 rgba(255,255,255,0.15) inset; transition: box-shadow 0.2s, transform 0.15s, background-position 0.4s; }
+.af-submit::before { content: ''; position: absolute; top: 0; left: -100%; width: 60%; height: 100%; background: linear-gradient(120deg, transparent, rgba(255,255,255,0.25), transparent); transform: skewX(-20deg); transition: left 0.5s ease; }
+.af-submit:hover { background-position: right center; box-shadow: 0 6px 28px rgba(14,122,90,0.55), 0 1px 0 rgba(255,255,255,0.2) inset; transform: translateY(-1px); }
+.af-submit:hover::before { left: 160%; }
+.af-submit:active { transform: translateY(0); box-shadow: 0 2px 12px rgba(14,122,90,0.35); }
 .af-secure { font-size: 12px; color: var(--text-sec); text-align: center; margin-top: 0.75rem; display: flex; align-items: center; justify-content: center; gap: 6px; }
 
 /* ── LEGAL PAGES ─────────────────────────────── */
